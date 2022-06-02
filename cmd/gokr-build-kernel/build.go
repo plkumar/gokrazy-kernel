@@ -216,6 +216,7 @@ CONFIG_NETFILTER_XT_MATCH_MULTIPORT=y
 CONFIG_NETFILTER_XT_MARK=y
 # for k3s
 CONFIG_BRIDGE_NETFILTER=m
+CONFIG_NETFILTER_FAMILY_BRIDGE=y
 
 # TODO: trim the settings below to the minimum set that works (taken from debian)
 ##
