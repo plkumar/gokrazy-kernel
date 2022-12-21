@@ -14,7 +14,7 @@ import (
 )
 
 // see https://www.kernel.org/releases.json
-var latest = "https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-5.18.9.tar.xz"
+var latest = "https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.1.tar.xz"
 
 const configAddendum = `
 CONFIG_ARCH_BCM2835=y 
@@ -1043,6 +1043,8 @@ CONFIG_SND_SOC_TEGRA_ALC5632=y
 CONFIG_SND_SOC_TEGRA_MAX98090=y
 CONFIG_SND_SOC_TEGRA_RT5677=y
 
+# for easy sandboxing with go-landlock
+CONFIG_SECURITY_LANDLOCK=y
 `
 
 func downloadKernel() error {
